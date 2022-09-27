@@ -1,0 +1,26 @@
+h1
+{
+  color: white;
+}
+body{
+  background-color: #1d2b3a;
+}
+input
+{
+  width: 60%;
+  padding:10px;
+  border: 1px solid #1d2b3a;
+  border-radius:5px;
+  outline: none;
+  color: black;
+  font-size: 1em;
+
+}
+h2
+{
+  color: white;
+}
+::-webkit-input-placeholder
+{
+  color: #57daca;
+}
