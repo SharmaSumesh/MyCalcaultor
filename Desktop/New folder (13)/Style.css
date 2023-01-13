@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(to bottom, #339966 0%, #66ffff 116%);
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+
+.conatiner{
+
+/* background: linear-gradient(to bottom, #666699 0%, #666699 100%); */
+background: linear-gradient(to bottom, #336699 0%, #336699 93%);
+padding: 1rem;
+border-radius: 10px;
+border:2px solid white;
+
+}
+
+.input{
+
+width: 35%;
+
+}
+
+.input1 {
+    text-align: right;
+    font-size: x-large;
+    width: 100%;
+    border-radius: 10px;
+    border:1px solid black;
+    padding:10px;
+}
+
+.calculator {
+    border: 2px solid black;
+    padding: 1rem;
+    background-color: rgb(204, 204, 222);
+    border-radius: 1rem;
+    width: fit-content;
+
+}
+
+
+h1 {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 1rem;
+    color: whitesmoke;
+}
+
+.row1 button {
+    margin-top: .4rem;
+    padding: .5rem;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.button {
+    width: 4rem;
+    border-radius: .3rem;
+
+}
+
+.button:hover {
+    background-color: rgb(49, 49, 247);
+    color: white;
+}
+
+.button1>a {
+
+    text-decoration: none;
+    color: black;
+
+}
+
+.button1 {
+
+    width: 4rem;
+    border-radius: .3rem;
+}
+.button1:hover {
+    background-color: rgb(49, 49, 247);
+    color: white;
+}
+
+
+
+@media (min-width: 576px) {}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Loan Calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     
+}
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f18621;
+}
+.row{
+    width: 800px;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+ 
+    </style>
+  </head>
+  <body>
+    <!-- main section starts here -->
+       <main>
+      <div class="row">
+        <div class="row1">
+            <h2>Loan Calculator</h2>
+        <form id="loan-form">
+            <div class="form-group">
+                <label>Principal</label>
+                  <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                </div>
+                <div class="form-group">
+                    <label>Intrest Rate</label>
+                      <input type="number" class="form-control" id="rate" placeholder="Rate">
+                  </div>
+                  <div class="form-group">
+                    <label>Loan tenure</label>
+                    <input type="number" class="form-control" id="month" placeholder="No. of month">
+                  </div>
+                 
+                  <div class="form-group">
+                    <input type="submit" value="Calculate" class="btn btn-danger btn-block" onclick="calculate()">
+                  </div>
+                 
+                  <input type="number" class="form-control" id="result">
+                  <div class="form-group">
+                    <label>Total EMI</label>
+                    <input type="number" class="form-control" id="emi" placeholder="EMI">
+                  </div>
+        </form>
+      </div>
+      </div>
+       </main>
+       <!-- main section ends here -->
+       <!-- script starts here -->
+       <script>
+          function calculate(){
+            var amount =  document.querySelector("#amount").value;
+          var rate =  document.querySelector("#rate").value;
+           var month =  document.querySelector("#month").value;
+           console.log(amount, rate ,month);
+           var intrest =  (amount * (rate * 0.01)) / month;
+           var  total = ((amount / month) + intrest).toFixed(2);
+           console.log(intrest,total);
+
+           document.querySelector('#result').value = intrest.toFixed(2);
+           document.querySelector('#emi').value = total;
+          }
+          // script ends here
+        
+       </script>
+  </body>
+</html>

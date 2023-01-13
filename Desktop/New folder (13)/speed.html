@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed</title>
+
+    <style>
+        .box {
+
+
+            background-image: url("https://media.istockphoto.com/photos/high-speed-abstract-track-of-motion-light-for-background-picture-id1217088301?b=1&k=20&m=1217088301&s=612x612&w=0&h=Q1F2Uk-dNotTpf5C6OojM9d-1S4oOR62oxgEr6K6jgI=");
+            background-size: contain;
+            background-color: rgba(95, 158, 160, 0.466);
+
+            padding: 2rem;
+            width: 50%;
+            margin: auto;
+            margin-top: 3rem;
+
+        }
+
+        .box>h2 {
+            text-align: center;
+            color: rgb(255, 221, 71);
+            font-size: xx-large;
+        }
+
+        .box>div {
+
+            background-color: rgba(170, 47, 164, 0.349);
+            width: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            font-weight: 600;
+            font-size: larger;
+            color: rgb(245, 198, 179)
+
+
+        }
+
+        .box > div > input {
+
+        text-align: center;
+        font-size: large;
+
+        }
+
+
+        .btn {
+
+            width: 50%;
+            border-radius: 0.5rem;
+            border: none;
+            height: 2rem;
+            background-color: rgba(70, 131, 180, 0.514);
+            font-size: x-large;
+            color: blanchedalmond;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2>Speed converter</h2>
+
+        <div class="ms">
+
+            <h3>m/s</h3>
+            <input type="number" class="m" placeholder="meter per second">
+
+        </div>
+
+        <div class="kms">
+
+            <h3>km/s</h3>
+            <input type="number" class="km" placeholder="kilometer per second">
+
+
+
+
+
+
+        </div>
+
+      
+
+    </div>
+
+
+    <script>
+
+        var ms = document.querySelector(".m")
+        var kms = document.querySelector(".km")
+
+        document.querySelector(".m").oninput = function () {
+
+
+            document.querySelector(".km").value = ms.value / 1000
+
+        }
+        document.querySelector(".km").oninput = function () {
+
+
+            document.querySelector(".m").value = kms.value * 1000
+
+        }
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
