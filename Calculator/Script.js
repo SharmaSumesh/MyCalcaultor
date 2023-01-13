@@ -69,6 +69,12 @@ Array.from(buttons).forEach((button) => {
             document.querySelector('.input1').value = a;
 
         }
+        else if(e.target.innerHTML=="X")
+        {
+            a+="*";
+            document.querySelector('.input1').value = a;
+
+        }
         else {
             a = a + e.target.innerHTML;
             document.querySelector('.input1').value = a;
