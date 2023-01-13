@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed</title>
+
+    <style>
+        .box {
+ 
+           
+            background-size: contain;
+            background-color: rgba(95, 158, 160, 0.466);
+
+            padding: 2rem;
+            width: 50%;
+            margin: auto;
+            margin-top: 3rem;
+
+        }
+        .box > h2 {
+            text-align: center;
+            color: tomato;
+            font-size:xx-large;
+        }
+
+        .box > div {
+
+            background-color: rgba(55, 112, 197, 0.349);
+            width: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 2rem;
+            font-weight: 600;
+            font-size: larger;
+            color:brown;
+         
+
+        }
+
+        
+
+        .btn{
+
+        width: 50%;
+        border-radius: 0.5rem;
+        border: none;
+        height: 2rem;
+        background-color: rgba(70, 131, 180, 0.514);
+        font-size: x-large;
+        color: blanchedalmond;
+        
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2>Speed converter</h2>
+
+        <div class="ms">
+
+            <h3>m/s</h3>
+            <input type="number" class="m" placeholder="meter per second">
+
+        </div>
+
+        <div class="kms">
+
+            <h3>km/s</h3>
+            <input type="number" class="km" placeholder="kilometer per second">
+
+            
+         
+
+        
+
+        </div>
+
+        <div>
+        <button type="button" class="btn" style="margin: auto;">convert</button> 
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var ms = document.querySelector(".m")
+        var kms = document.querySelector(".km")
+
+        document.querySelector(".btn").onclick = function () {
+
+
+            document.querySelector(".km").value = ms.value / 1000
+
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
