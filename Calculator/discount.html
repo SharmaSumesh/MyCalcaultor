@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="discount.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Discount</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* border: 1px solid red; */
+    }
+
+    /* this  is main container */
+    .contaienr {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .mid-box {
+        background-color: grey;
+        border: 1px solid black;
+        border-radius: 1rem;
+        height: 60%;
+        width: 40%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cont,
+    .discount,
+    .final-price,
+    .get-price {
+        margin-top: 0.6rem;
+    }
+
+    #price {
+        width: 100%;
+        padding: 5px;
+    }
+
+    #discount {
+        width: 100%;
+        padding: 5px;
+    }
+
+    #final-Price {
+        width: 100%;
+        padding: 5px;
+    }
+
+    #heading {
+        border-bottom: 1px solid white;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        color: whitesmoke;
+    }
+
+    #submit {
+        display: flex;
+        justify-content: center;
+    }
+
+    label {
+        color: whitesmoke;
+        font-weight: bolder;
+    }
+</style>
+
+<body>
+
+
+    <div class="contaienr">
+
+        <div class="mid-box">
+            <h4 id="heading">Discount</h4>
+
+            <div class="cont">
+                <div class="original-price">
+                    <label for="Original Price">Origina Price</label>
+                    <input id="price" type="number">
+                </div>
+
+                <div class="discount">
+                    <label for="Discount Price">Discount (% off)</label>
+                    <input id="discount" type="number">
+                </div>
+
+
+                <div class="final-price">
+                    <label for="final-price">Final Price</label>
+                    <input type="number" id="final-Price">
+                </div>
+
+                <div id="submit">
+                    <button class="get-price btn btn-danger" onclick="getPrice()">Get Price</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- <script type="text/javascript" src="discount.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let getPrice = () => {
+            let originl_price = document.getElementById("price").value;
+            let discount = document.getElementById("discount").value / 100;
+
+            let afterDisc = originl_price - (originl_price * discount)
+
+            document.getElementById("final-Price").value = afterDisc.toFixed(2);
+
+        }
+    </script>
+</body>
+
+</html>
